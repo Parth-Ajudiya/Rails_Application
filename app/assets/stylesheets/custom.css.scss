@@ -1,0 +1,53 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+    .navbar
+        {
+            background-color: #000000 !important;
+        }
+
+    .navbar-brand 
+        {
+            font-size: 2rem;
+        }
+
+        .nav-link{
+            color: wheat !important
+        }
+
+        #logo{
+            float: left;
+            font-size: 1.7em;
+            color: #ffff;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            font-weight: bold;
+
+        }
+
+        #home-container{
+            margin-top:  20px;
+        }
+        
+        .king{
+            background-image: asset-url('home1.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 450px;
+        }
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+body {
+  background: #467ab1;
+  background: linear-gradient(to right, #274734, #174564);
+}
+
+

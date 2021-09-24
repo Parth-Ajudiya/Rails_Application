@@ -20,7 +20,8 @@
 </p>
 
 <p>
-    <%= f.submit %>
+    <%= f.submit  data: {confirm: "are you sure ?"}%>
 </p>
 <% end %>
 
+<td><%= link_to "Cancel and return Articlel Listing Page",articles_path%></td>
