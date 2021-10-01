@@ -1,0 +1,42 @@
+<% if @article.errors.any? %>
+    <h2> Please folloving erros</h2>
+    <ul>
+    <% @article.errors.full_messages.each do |msg|%>
+    <li><%=msg%></li>
+    <% end %>
+    </ul>
+<% end %>
+<div class="row jusify-contenet-center mt-4">
+ <div class="col-11">
+    <div class="container">
+      <div class="nested-fields">
+
+       <%= form_with(model: @article, local: true) do |f|%>
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label "TITLE",class: "col-2 col-form-label"  %>
+            <div class="col-8">
+            <%= f.text_field :title, class: "form-control" %></br>
+            </div>
+          </div> 
+
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label " DESCRIPRTION",class: "col-2 col-form-label" %>
+            <div class="col-8">
+            <%= f.text_area :description, class: "form-control" %></br>
+            </div>
+          </div> 
+
+          
+    </div>
+  </div>
+</div>
+
+<p>
+    <div id="page-content">
+    <div class="d-grid gap-2 d-md-flex justify-content-center">
+    <%= f.submit  data: {confirm: "are you sure ?"} , class: "text-center"%>
+    </div>
+    </div>
+</p>
+     <%end%>
+ 
