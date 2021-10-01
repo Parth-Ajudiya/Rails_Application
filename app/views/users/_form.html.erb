@@ -1,0 +1,50 @@
+<div class="row jusify-contenet-center mt-4">
+ <div class="col-11">
+    <div class="container">
+      <div class="nested-fields">
+
+          <% if @user.errors.any? %>
+              <h2> ******* erros *******</h2>
+              <ul>
+              <% @user.errors.full_messages.each do |msg|%>
+              <li><%=msg%></li>
+              <% end %>
+              </ul>
+          <% end %>
+
+
+       <%= form_with(model: @user, local: true) do |f|%>
+
+           <div class="form-group row fs-4 fw-bold">
+            <%= f.label " User Name",class: "col-2 col-form-label" %>
+            <div class="col-8">
+            <%= f.text_area :user_name, class: "form-control", placeholder: "Enter your user name" %></br>
+            </div>
+          </div> 
+
+
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label "Email",class: "col-2 col-form-label"  %>
+            <div class="col-8">
+            <%= f.text_field :email, class: "form-control",  placeholder: "Enter your email" %></br>
+            </div>
+          </div> 
+
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label " Password",class: "col-2 col-form-label" %>
+            <div class="col-8">
+            <%= f.password_field  :password, class: "form-control",  placeholder: "Enter your password" %></br>
+            </div>
+          </div> 
+
+          <div id="page-content">
+            <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <%= f.submit "Sign up!", class: "btn btn-outline-success"%>
+            </div>
+          </div>
+
+          
+     <%end%>
+    </div>
+  </div>
+</div>
