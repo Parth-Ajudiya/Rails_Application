@@ -18,7 +18,7 @@
            <div class="form-group row fs-4 fw-bold">
             <%= f.label " User Name",class: "col-2 col-form-label" %>
             <div class="col-8">
-            <%= f.text_area :user_name, class: "form-control", placeholder: "Enter your user name" %></br>
+            <%= f.text_field :user_name, class: "form-control", placeholder: "Enter your user name" %></br>
             </div>
           </div> 
 
@@ -39,7 +39,7 @@
 
           <div id="page-content">
             <div class="d-grid gap-2 d-md-flex justify-content-center">
-            <%= f.submit "Sign up!", class: "btn btn-outline-success"%>
+            <%= f.submit(@user.new_record? ? "Sign up!" : "Update Profile", class: "btn btn-outline-success")%>
             </div>
           </div>
 
