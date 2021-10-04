@@ -1,0 +1,34 @@
+<h1 class="text-center mt-4"> Log in </h1>
+
+<div class="row jusify-contenet-center mt-4">
+ <div class="col-11">
+    <div class="container">
+      <div class="nested-fields">
+
+       <%= form_with(scope: :sessions, url:login_path, class: "shadow p-3 mb-3 bg-secondary rounded", local: true) do |f|%>
+
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label "Email",class: "col-2 col-form-label"  %>
+            <div class="col-8">
+            <%= f.text_field :email, class: "form-control",  placeholder: "Enter your email" %></br>
+            </div>
+          </div> 
+
+          <div class="form-group row fs-4 fw-bold">
+            <%= f.label " Password",class: "col-2 col-form-label" %>
+            <div class="col-8">
+            <%= f.password_field  :password, class: "form-control",  placeholder: "Enter your password" %></br>
+            </div>
+          </div> 
+
+          <div id="page-content">
+            <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <%= f.submit "Login", class: "btn btn-outline-dark"%>
+            </div>
+          </div>
+
+          
+     <%end%>
+    </div>
+  </div>
+</div>
