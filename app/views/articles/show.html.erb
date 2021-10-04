@@ -1,8 +1,16 @@
 <h1> Hiii </h1>
 
+<div class="flickr_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+</div>
+
 <p><strong> Title: </strong> <%= @article.title %></p> 
 <p><strong> Description: </strong> <%= @article.description %></p> 
 
 <td><%= link_to "Edit", edit_article_path(@article)%></td>  | 
 <td><%= link_to "Delete", article_path(@article),method: :delete, data: {confirm: "are you sure ?"}%></td>  |    
 <td><%= link_to "Articlel Listing Page",articles_path%></td>
+
+<div class="flickr_pagination mb-4">
+    <%= will_paginate @articles, :container => false %>
+</div>
