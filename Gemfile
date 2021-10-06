@@ -24,6 +24,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.3'
 
 
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -36,6 +37,7 @@ group :development, :test do
 end
 
 group :development do
+
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
@@ -46,7 +48,11 @@ group :development do
   gem 'spring'
 end
 
+
 group :test do
+
+    gem 'rexml', '~> 3.2', '>= 3.2.4'
+
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
