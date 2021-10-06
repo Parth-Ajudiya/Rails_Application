@@ -14,4 +14,5 @@ class CreateCategoryTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_match "Sports", response.body
   end
+  
 end
