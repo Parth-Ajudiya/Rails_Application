@@ -1,0 +1,24 @@
+<% if @category.errors.any? %>
+              <h2> ******* erros *******</h2>
+              <ul>
+              <% @category.errors.full_messages.each do |msg|%>
+              <li><%=msg%></li>
+              <% end %>
+              </ul>
+          <% end %>
+
+
+      <%= form_with(model: @category, local: true) do |f|%>
+
+           <div class="form-group row fs-4 fw-bold">
+            <%= f.label :name, "Category name",class: "col-2 col-form-label" %>
+            <div class="col-8">
+            <%= f.text_field :name , class: "form-control", placeholder: "Enter your user name" %></br>
+            </div>
+          </div> 
+          <div id="page-content">
+            <div class="d-grid gap-2 d-md-flex justify-content-center">
+            <%= f.submit class: "btn btn-outline-success"%>
+            </div>
+          </div>
+      <%end%>
