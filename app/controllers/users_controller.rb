@@ -47,7 +47,8 @@ class UsersController < ApplicationController
         session[user_id] = nil  if @user == current_user
         flash[:notice] = "Account and your assosiate articles are deleted"
         redirect_to articles_path
-
+    end
+    
     private
     def  params_user
         params.require(:user).permit(:user_name, :email, :password)
@@ -59,5 +60,4 @@ class UsersController < ApplicationController
             redirect_to @user
         end 
     end
-    
 end

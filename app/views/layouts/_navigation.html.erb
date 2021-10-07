@@ -14,7 +14,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select
+                Article
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -26,6 +26,22 @@
                 <li><%= link_to "Articles", articles_path, class:"dropdown-item"%></li>
                 <li><hr class="dropdown-divider"></li>
               </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <% if logged_in? && current_user.admin?%>
+
+                  <li><%= link_to "Create new categories", new_category_path, class:"dropdown-item"%></li>
+                  <li> <%= link_to "Delate profile" , user_path(current_user), class: "dropdown-item text-danger " , method: :delete, data: {confirm: "Are you sure ? "}%>
+                  <% end %>
+                  <li><%= link_to "Articles", articles_path, class:"dropdown-item"%></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
             </li>
             
             <% if logged_in? %>
